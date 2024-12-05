@@ -1,0 +1,22 @@
+{% extends 'home.html'%}
+{% block title%}ADD Books{% endblock%}
+{% block style %}
+<style>
+      
+</style>
+
+{% endblock %}
+{% block body %}
+<div class="card mycustomcardstyle">
+    <div class="card-body">
+        <h3>Add Books</h3>
+        <form action="" method="post" enctype="multipart/form-data" novalidate>
+            {% csrf_token %}
+            {{add_book_form.as_p}}
+            <input type="submit" value="Add Books" class="btn btn-success">
+        </form>
+    </div>
+
+</div>
+
+{% endblock %}
